@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <title>Notes — Chanon Aupattanapanit</title>
+  <meta name="description" content="Essays by Chanon Aupattanapanit on AI engineering, agentic systems, and working with data.">
+  <meta name="author" content="Chanon Aupattanapanit">
+  <meta name="theme-color" content="#f7f7f5">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7f7f5'/%3E%3Crect x='9' y='9' width='14' height='14' fill='%2315181c'/%3E%3C/svg%3E">
+  <!-- [ FILL IN: replace with your actual GitHub Pages URL once the repo is published ] -->
+  <link rel="canonical" href="https://nothingtaro.github.io/data-website/notes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Notes — Chanon Aupattanapanit">
+  <meta property="og:description" content="Essays on AI engineering, agentic systems, and working with data.">
+  <meta property="og:url" content="https://nothingtaro.github.io/data-website/notes.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-mark"></span>
+      <span>Chanon A.</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="notes.html" class="current">Notes</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Page hero --------------------------------------------------- -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Notes / Writing</p>
+        <h1>Notes.</h1>
+        <p class="page-hero-text">
+          Essays on AI engineering and working with data — the ideas I'm thinking
+          through, published on Medium.
+        </p>
+      </div>
+    </section>
+
+    <!-- Notes list -------------------------------------------------- -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Note 1 -->
+        <article class="note-entry" data-reveal id="loop-engineering">
+          <div class="note-entry-sidebar">
+            <time class="note-date" datetime="2026-06-29">29 Jun 2026</time>
+            <span class="note-tag">Agentic AI</span>
+          </div>
+          <div>
+            <h2>Loop Engineering: the loop that knows when to stop</h2>
+            <p>
+              You built the harness — now design the loop that runs over it. This piece makes
+              the case for loop engineering: the decision-making system that determines whether
+              an agent should keep iterating or stop.
+            </p>
+            <div class="pull-quote">
+              <p>You built the harness. Now design the loop that runs over it.</p>
+            </div>
+            <p>
+              Most production systems treat the loop as plumbing rather than a deliberate design
+              layer — the one sitting above prompt, context, and harness engineering. The essay
+              argues why that layer matters and how to reason about it.
+            </p>
+            <a class="teaser-link" href="https://medium.com/@chanon.aupattanapanit/loop-engineering-the-loop-that-knows-when-to-stop-b0baf8ada6f9" target="_blank" rel="noopener noreferrer">Read on Medium →</a>
+          </div>
+        </article>
+
+        <!-- Note 2 -->
+        <article class="note-entry" data-reveal id="prompt-to-harness">
+          <div class="note-entry-sidebar">
+            <time class="note-date" datetime="2026-06-07">7 Jun 2026</time>
+            <span class="note-tag">AI Engineering</span>
+          </div>
+          <div>
+            <h2>From prompt to harness: three evolutions every AI builder must understand</h2>
+            <p>
+              Most production AI failures aren't model problems. This essay lays out a framework —
+              prompt engineering, context engineering, and harness engineering — for what those
+              failures actually are and how to fix them.
+            </p>
+            <div class="pull-quote">
+              <p>Most production AI failures aren't model problems.</p>
+            </div>
+            <p>
+              The argument: failures usually come not from the model but from inadequate context
+              management and the missing safety layers around it — three overlapping disciplines
+              rather than one.
+            </p>
+            <a class="teaser-link" href="https://medium.com/@chanon.aupattanapanit/from-prompt-to-harness-the-three-evolutions-every-ai-builder-must-understand-8c356fe2081a" target="_blank" rel="noopener noreferrer">Read on Medium →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-copy">&copy; 2026 Chanon Aupattanapanit</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/chanon-a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:chanon.aupattanapanit@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/motion.js" defer></script>
+</body>
+</html>

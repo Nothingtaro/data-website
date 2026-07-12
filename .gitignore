@@ -1,0 +1,11 @@
+# Local content and private documents
+content/
+/*.pdf
+CLAUDE.md
+assets/images/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

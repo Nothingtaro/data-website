@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <title>Chanon Aupattanapanit — Data &amp; ML</title>
+  <meta name="description" content="Portfolio of Chanon Aupattanapanit — data analytics, machine learning, and the decisions that follow.">
+  <meta name="author" content="Chanon Aupattanapanit">
+  <meta name="theme-color" content="#f7f7f5">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7f7f5'/%3E%3Crect x='9' y='9' width='14' height='14' fill='%2315181c'/%3E%3C/svg%3E">
+  <!-- [ FILL IN: replace with your actual GitHub Pages URL once the repo is published ] -->
+  <link rel="canonical" href="https://nothingtaro.github.io/data-website/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chanon Aupattanapanit — Data & ML">
+  <meta property="og:description" content="Data analytics, machine learning, and the decisions that follow.">
+  <meta property="og:url" content="https://nothingtaro.github.io/data-website/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-mark"></span>
+      <span>Chanon A.</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="current">Home</a>
+      <a href="work.html">Work</a>
+      <a href="notes.html">Notes</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero ========================================================= -->
+    <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+          <div class="hero-identity">
+            <span class="hero-id-text">
+              <span class="hero-id-name">Chanon Aupattanapanit</span>
+              <span class="hero-id-role">
+                <span class="live-dot" aria-hidden="true"></span>
+                Data Analyst · Krungsri Data Science &amp; AI
+              </span>
+            </span>
+          </div>
+
+          <h1 class="hero-headline">Raw data,<br><span class="hl">clear decisions.</span></h1>
+
+          <p class="hero-lede">
+            I turn behavioral and transactional data into decisions — customer
+            segmentation, funnel analysis, dashboards, and applied machine learning.
+            Lately that means Agentic and Voice AI in banking.
+          </p>
+
+          <div class="hero-cta">
+            <a class="button primary" href="#experience">View experience</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual sql-demo" data-sql-demo
+                aria-labelledby="sql-demo-title" aria-describedby="sql-demo-description">
+          <figcaption class="sql-toolbar">
+            <span class="sql-file" id="sql-demo-title">
+              <span class="sql-file-mark" aria-hidden="true"></span>
+              customer_segments.sql
+            </span>
+            <span class="sql-connection">
+              <span class="sql-connection-dot" aria-hidden="true"></span>
+              <span class="sql-connection-wide">BigQuery · </span>analytics
+            </span>
+            <button class="sql-run" type="button" data-sql-run hidden>
+              <svg viewBox="0 0 10 12" width="8" height="10" aria-hidden="true" focusable="false">
+                <path d="M1 1.5 8.5 6 1 10.5Z" fill="currentColor"></path>
+              </svg>
+              <span data-sql-run-label>Run again</span>
+            </button>
+            <span class="visually-hidden" id="sql-demo-description">
+              An illustrative customer segmentation query being written and run, followed by sample results.
+            </span>
+          </figcaption>
+
+          <div class="sql-editor">
+            <pre class="sql-query"><code><span class="sql-line" data-sql-line><span class="sql-line-code"><span class="tok-key">SELECT</span></span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code">  segment,</span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code">  <span class="tok-fn">COUNT</span>(<span class="tok-key">DISTINCT</span> customer_id) <span class="tok-key">AS</span> users,</span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code">  <span class="tok-fn">ROUND</span>(<span class="tok-fn">AVG</span>(ltv)) <span class="tok-key">AS</span> avg_ltv</span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code"><span class="tok-key">FROM</span> <span class="tok-source">`analytics.customer_segments`</span></span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code"><span class="tok-key">WHERE</span> last_active_date <span class="tok-op">&gt;=</span> <span class="tok-fn">DATE_SUB</span>(</span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code">  <span class="tok-fn">CURRENT_DATE</span>(), <span class="tok-key">INTERVAL</span> <span class="tok-num">90</span> <span class="tok-key">DAY</span>)</span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code"><span class="tok-key">GROUP BY</span> segment</span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code"><span class="tok-key">ORDER BY</span> avg_ltv <span class="tok-key">DESC</span></span></span>
+<span class="sql-line" data-sql-line><span class="sql-line-code"><span class="tok-key">LIMIT</span> <span class="tok-num">3</span>;</span></span></code></pre>
+          </div>
+
+          <div class="sql-progress" aria-hidden="true"><span></span></div>
+
+          <div class="sql-results">
+            <div class="sql-results-bar">
+              <span class="sql-results-tab">Results</span>
+              <span class="sql-sample-label">Sample data</span>
+            </div>
+            <div class="sql-results-body">
+              <table class="sql-table">
+                <caption class="visually-hidden">Sample results from the customer segmentation query</caption>
+                <colgroup>
+                  <col class="sql-col-segment">
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">segment</th>
+                    <th scope="col">users</th>
+                    <th scope="col">avg_ltv</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="sql-result-row" data-sql-row>
+                    <td>Champions</td>
+                    <td>184,392</td>
+                    <td>฿12,840</td>
+                  </tr>
+                  <tr class="sql-result-row" data-sql-row>
+                    <td>Loyal</td>
+                    <td>327,018</td>
+                    <td>฿8,420</td>
+                  </tr>
+                  <tr class="sql-result-row" data-sql-row>
+                    <td>Promising</td>
+                    <td>241,506</td>
+                    <td>฿5,960</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="sql-empty-state" data-sql-empty aria-hidden="true">Waiting for query</div>
+            </div>
+            <div class="sql-status">
+              <span class="sql-status-copy">
+                <span class="sql-status-dot" aria-hidden="true"></span>
+                <span data-sql-status>Query complete</span>
+              </span>
+              <span class="sql-status-meta" data-sql-meta>3 rows</span>
+            </div>
+            <span class="visually-hidden" data-sql-announcer aria-live="polite"></span>
+          </div>
+        </figure>
+
+      </div>
+
+      <!-- Credibility strip -->
+      <div class="container creds">
+        <p class="creds-label">Trusted with data at</p>
+        <ul class="creds-brands">
+          <li class="is-current">Krungsri</li>
+          <li>Shopee</li>
+          <li>ttb</li>
+          <li>Michelin</li>
+          <li>foodpanda</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 01 · Experience ============================================= -->
+    <section id="experience" class="section section--divided home-experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-index" aria-hidden="true">01</span>
+          <p class="section-kicker">Experience</p>
+          <h2>Where I’ve worked</h2>
+          <p class="section-intro">
+            Five roles across banking, e-commerce, manufacturing, and food delivery — turning data into
+            decisions, automation, and products people can use.
+          </p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item is-current" data-reveal>
+            <p class="experience-period">May 2025 – present</p>
+            <div class="experience-position">
+              <h3>Data Analyst</h3>
+              <p class="experience-org">Krungsri · DDO Innovation, Data Science &amp; AI</p>
+            </div>
+            <p class="experience-summary">
+              Built renewal-campaign segmentation and app-funnel analysis to guide personalized
+              communication; supporting Voice and Agentic AI for QC operations.
+            </p>
+          </article>
+
+          <article class="experience-item" data-reveal>
+            <p class="experience-period">Nov 2023 – Apr 2025</p>
+            <div class="experience-position">
+              <h3>Business Intelligence &amp; Seller Experience</h3>
+              <p class="experience-org">Shopee · BD Infrastructure</p>
+            </div>
+            <p class="experience-summary">
+              Built payment-operations automation that cut prepaid-campaign task volume by 70%,
+              then surfaced seller pain points through sentiment analysis.
+            </p>
+          </article>
+
+          <article class="experience-item" data-reveal>
+            <p class="experience-period">Jun – Aug 2023</p>
+            <div class="experience-position">
+              <h3>Data Scientist <span class="role-tag">Intern</span></h3>
+              <p class="experience-org">ttb bank · TTB Analytics</p>
+            </div>
+            <p class="experience-summary">
+              Applied reinforcement learning to enhance the DELPHI algorithm behind personalized
+              card recommendations in the TTB application.
+            </p>
+          </article>
+
+          <article class="experience-item" data-reveal>
+            <p class="experience-period">Jan – Apr 2023</p>
+            <div class="experience-position">
+              <h3>Data Analyst <span class="role-tag">Intern</span></h3>
+              <p class="experience-org">Michelin · Norm &amp; Regulation</p>
+            </div>
+            <p class="experience-summary">
+              Designed a dashboard to track tire-line certification approvals and shaped raw
+              operational data into analysis-ready datasets.
+            </p>
+          </article>
+
+          <article class="experience-item" data-reveal>
+            <p class="experience-period">Dec 2021 – Jan 2022</p>
+            <div class="experience-position">
+              <h3>Data Analyst <span class="role-tag">Intern</span></h3>
+              <p class="experience-org">foodpanda · Data &amp; Insight</p>
+            </div>
+            <p class="experience-summary">
+              Extracted vendor insights and built an interactive KPI dashboard for 2021
+              business performance.
+            </p>
+          </article>
+        </div>
+
+        <a class="see-all" href="about.html#experience">Full experience &amp; education →</a>
+      </div>
+    </section>
+
+    <!-- 02 · Work =================================================== -->
+    <section class="section section--divided">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-index" aria-hidden="true">02</span>
+          <p class="section-kicker">Selected work</p>
+          <h2>Case studies</h2>
+          <p class="section-intro">
+            Each project starts with a real question. Here are two I've spent time on recently.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card" data-reveal>
+            <div class="feature-top">
+              <span class="feature-cat">Deep learning</span>
+              <span class="feature-num" aria-hidden="true">01</span>
+            </div>
+            <h3>Thai Food Image Classification</h3>
+            <p>A CNN that identifies 12 Thai dishes from a single photo — a fine-tuned
+              Xception reached 93% accuracy across four benchmarked architectures.</p>
+            <div class="feature-foot">
+              <span class="feature-metric"><b>93%</b> accuracy · 4 models</span>
+              <a class="teaser-link" href="work.html#thai-food">Read case study →</a>
+            </div>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="feature-top">
+              <span class="feature-cat">Optimization / ML</span>
+              <span class="feature-num" aria-hidden="true">02</span>
+            </div>
+            <h3>Dynamic Vehicle Routing</h3>
+            <p>Dispatch strategies for vehicle routing with time windows at the EURO Meets
+              NeurIPS 2022 competition — 26th on the qualification leaderboard.</p>
+            <div class="feature-foot">
+              <span class="feature-metric"><b>26th</b> of the qualifying field</span>
+              <a class="teaser-link" href="work.html#vehicle-routing">Read case study →</a>
+            </div>
+          </article>
+        </div>
+
+        <a class="see-all" href="work.html">See all work →</a>
+      </div>
+    </section>
+
+    <!-- 03 · Notes ================================================== -->
+    <section class="section section--divided">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-index" aria-hidden="true">03</span>
+          <p class="section-kicker">Writing</p>
+          <h2>Field notes</h2>
+          <p class="section-intro">
+            Essays on AI engineering and the practice of working with data — published on Medium.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="note-card" data-reveal>
+            <div class="note-top">
+              <time datetime="2026-06-29">Jun 2026</time>
+              <span class="note-tag">Agentic AI</span>
+            </div>
+            <h3>Loop Engineering: the loop that knows when to stop</h3>
+            <p>The overlooked layer above prompt, context, and harness — designing the control
+              flow that decides when an agent keeps iterating or stops.</p>
+            <a class="teaser-link" href="notes.html">Read note →</a>
+          </article>
+
+          <article class="note-card" data-reveal>
+            <div class="note-top">
+              <time datetime="2026-06-07">Jun 2026</time>
+              <span class="note-tag">AI Engineering</span>
+            </div>
+            <h3>From prompt to harness: three evolutions every AI builder must understand</h3>
+            <p>Most production AI failures aren't model problems. A framework for what they
+              actually are — and how to fix them.</p>
+            <a class="teaser-link" href="notes.html">Read note →</a>
+          </article>
+        </div>
+
+        <a class="see-all" href="notes.html">See all notes →</a>
+      </div>
+    </section>
+
+    <!-- Contact close =============================================== -->
+    <section id="contact" class="section contact-close">
+      <div class="container">
+        <p class="section-kicker">Get in touch</p>
+        <h2>Let's talk data.</h2>
+        <p class="contact-text">
+          Whether you have a project in mind, a question about something you read here,
+          or just want to connect — I'm reachable.
+        </p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/chanon-a/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+          <a href="mailto:chanon.aupattanapanit@gmail.com">Email →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-copy">&copy; 2026 Chanon Aupattanapanit</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/chanon-a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:chanon.aupattanapanit@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/motion.js" defer></script>
+</body>
+</html>
