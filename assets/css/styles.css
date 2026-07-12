@@ -426,6 +426,23 @@ p { margin-top: 0; line-height: 1.65; }
   margin: 0;
 }
 
+.about-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: clamp(48px, 8vw, 112px);
+  align-items: center;
+}
+
+.about-hero-photo {
+  width: 240px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 28%;
+  border: 1px solid var(--line-strong);
+  justify-self: end;
+  animation: fade-up var(--dur-base) var(--ease-out) 120ms both;
+}
+
 /* ---------------------------------------------------------------
    Hero (index.html)
 --------------------------------------------------------------- */
@@ -1361,16 +1378,6 @@ p { margin-top: 0; line-height: 1.65; }
   color: var(--ink);
 }
 
-.about-photo {
-  float: right;
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: 50% 28%;
-  margin: 4px 0 20px 28px;
-  border: 1px solid var(--line-strong);
-}
-
 .skills-panel {
   border-top: 2px solid var(--ink);
   padding-top: 24px;
@@ -1674,6 +1681,13 @@ ul.timeline-desc li::marker {
     gap: 48px;
   }
 
+  .about-hero-layout {
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 40px;
+  }
+
+  .about-hero-photo { width: 200px; }
+
   .skills-panel { position: static; }
 }
 
@@ -1684,7 +1698,15 @@ ul.timeline-desc li::marker {
   .hero { padding-block: 40px 24px; }
   .section { padding-block: 60px; }
   .site-footer { flex-direction: column; align-items: flex-start; }
-  .about-photo { float: none; width: 100%; max-width: 240px; margin: 0 0 24px; }
+  .about-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-hero-photo {
+    width: min(220px, 68vw);
+    justify-self: start;
+  }
   .sql-toolbar {
     gap: 10px;
     padding: 7px 9px 7px 12px;
