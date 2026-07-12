@@ -29,6 +29,8 @@ machine learning projects, professional experience, and technical notes.
 |   |-- documents/
 |   |   |-- thai-food-image-classification-paper.pdf
 |   |   `-- dynamic-vehicle-routing-presentation.pdf
+|   |-- images/
+|   |   `-- chanon-aupattanapanit.jpg
 |   `-- js/
 |       `-- motion.js
 |-- .gitignore
@@ -36,8 +38,8 @@ machine learning projects, professional experience, and technical notes.
 `-- README.md
 ```
 
-The local `content/` directory, private documents, images, and development notes
-are excluded. Only the two project documents under `assets/documents/` are public.
+The local `content/` directory, private documents, and development notes are
+excluded. The profile image and two project documents under `assets/` are public.
 
 ## Run locally
 
@@ -54,8 +56,9 @@ Then visit `http://localhost:8000`.
 ## Customize
 
 1. Update the personal details and links in the HTML pages.
-2. Adjust colors, typography, and layout tokens in `assets/css/styles.css`.
-3. Update canonical and Open Graph URLs when publishing under a different URL.
+2. Replace the profile image in `assets/images/` if needed.
+3. Adjust colors, typography, and layout tokens in `assets/css/styles.css`.
+4. Update canonical and Open Graph URLs when publishing under a different URL.
 
 ## Deployment
 

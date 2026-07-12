@@ -2,7 +2,6 @@
 content/
 /*.pdf
 CLAUDE.md
-assets/images/
 
 # OS and editor files
 .DS_Store
