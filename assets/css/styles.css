@@ -1517,6 +1517,23 @@ p { margin-top: 0; line-height: 1.65; }
   max-width: 58ch;
 }
 
+ul.timeline-desc {
+  padding-left: 1.15rem;
+}
+
+ul.timeline-desc li {
+  padding-left: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+ul.timeline-desc li:last-child {
+  margin-bottom: 0;
+}
+
+ul.timeline-desc li::marker {
+  color: var(--accent);
+}
+
 /* Certifications */
 .certs {
   padding-top: 72px;
