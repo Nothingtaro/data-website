@@ -566,6 +566,12 @@ p { margin-top: 0; line-height: 1.65; }
 
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
+.hero-tertiary {
+  margin: 18px 0 0;
+  animation: fade-up var(--dur-base) var(--ease-out) both;
+  animation-delay: 300ms;
+}
+
 /* hero visual — SQL query demo */
 .hero-visual {
   min-width: 0;
@@ -1628,17 +1634,23 @@ ul.timeline-desc li::marker {
    Responsive — 900px
 --------------------------------------------------------------- */
 @media (max-width: 900px) {
+  /* Keep the header on one row so the sticky bar stays short and in-page
+     anchors land correctly (see :target scroll-margin-top override below). */
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
+    padding-block: 14px;
   }
 
+  .brand { flex-shrink: 0; }
+
   .site-nav {
-    width: 100%;
     overflow-x: auto;
-    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
   }
+
+  /* Shorter one-row header on mobile → smaller anchor clearance. */
+  :target { scroll-margin-top: 72px; }
 
   .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 44px; }
 

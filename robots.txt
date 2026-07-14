@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nothingtaro.github.io/data-website/sitemap.xml

@@ -2,6 +2,7 @@
 content/
 /*.pdf
 CLAUDE.md
+portfolio-website-audit-report.md
 
 # OS and editor files
 .DS_Store
