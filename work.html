@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'none'; frame-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
   <meta name="referrer" content="no-referrer">
-  <title>Work — Chanon Aupattanapanit</title>
+  <title>Work · Chanon Aupattanapanit</title>
   <meta name="description" content="Case studies in data analytics and machine learning by Chanon Aupattanapanit.">
   <meta name="author" content="Chanon Aupattanapanit">
   <meta name="theme-color" content="#f7f7f5">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7f7f5'/%3E%3Crect x='9' y='9' width='14' height='14' fill='%2315181c'/%3E%3C/svg%3E">
   <link rel="canonical" href="https://nothingtaro.github.io/data-website/work.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Work — Chanon Aupattanapanit">
+  <meta property="og:title" content="Work · Chanon Aupattanapanit">
   <meta property="og:description" content="Case studies in data analytics and machine learning.">
   <meta property="og:url" content="https://nothingtaro.github.io/data-website/work.html">
   <meta property="og:image" content="https://nothingtaro.github.io/data-website/assets/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Chanon Aupattanapanit — Data Analyst moving into Agentic and Voice AI">
+  <meta property="og:image:alt" content="Chanon Aupattanapanit · Data Analyst moving into Agentic and Voice AI">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Work — Chanon Aupattanapanit">
+  <meta name="twitter:title" content="Work · Chanon Aupattanapanit">
   <meta name="twitter:description" content="Case studies in data analytics and machine learning.">
   <meta name="twitter:image" content="https://nothingtaro.github.io/data-website/assets/images/og-image.png">
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -38,6 +38,7 @@
       <a href="work.html" class="current" aria-current="page">Work</a>
       <a href="notes.html">Notes</a>
       <a href="about.html">About</a>
+      <a class="nav-resume" href="assets/documents/chanon-aupattanapanit-resume.pdf" download aria-label="Download résumé (PDF)">Résumé <span aria-hidden="true">&darr;</span></a>
     </nav>
   </header>
 
@@ -49,7 +50,7 @@
         <p class="eyebrow">Work / Case Studies</p>
         <h1>Projects</h1>
         <p class="page-hero-text">
-          Each entry documents a question I tried to answer — the problem, the method,
+          Each entry documents a question I tried to answer: the problem, the method,
           and what came out the other side.
         </p>
       </div>
@@ -60,27 +61,73 @@
       <div class="container">
 
         <!-- 01 -->
-        <article class="case-study" data-reveal id="thai-food">
+        <article class="case-study" data-reveal id="payment-automation">
           <div>
             <span class="case-id">01</span>
+            <span class="case-status">Professional · Shopee · 2023&ndash;2025</span>
+          </div>
+          <div>
+            <h2>Payment-Operations Automation at Shopee</h2>
+            <p class="case-desc">
+              Python automation for the prepaid-campaign payment workflow on Shopee's BD
+              Infrastructure team, built to take repetitive manual steps off the payment-solutions
+              team.
+            </p>
+            <div class="case-entry">
+              <span class="entry-key">Problem</span>
+              <p class="entry-val">Prepaid-campaign payment operations ran on repetitive manual steps that were slow and easy to get wrong, and the volume grew with every campaign. The team needed the throughput without adding headcount.</p>
+
+              <span class="entry-key">Method</span>
+              <p class="entry-val">Gathered requirements from the payment-solutions team, mapped the manual workflow end to end, and built Python automation for the repetitive steps, with validation checks so accuracy held up as volume scaled.</p>
+
+              <span class="entry-key">Result</span>
+              <p class="entry-val">Cut prepaid-campaign task volume by 70%, freeing the team for higher-value work and shortening turnaround while keeping error rates low.</p>
+
+              <span class="entry-key">Limitation</span>
+              <p class="entry-val">The automation was scoped to the prepaid-campaign flow and its specific rules. Cases outside that flow still needed manual handling, and the logic had to be revisited whenever campaign rules changed.</p>
+
+              <span class="entry-key">What I'd change</span>
+              <p class="entry-val">Generalize it into a configurable pipeline so new campaign types onboard through config rather than code, and add monitoring that flags rule changes instead of relying on someone noticing.</p>
+            </div>
+            <div class="case-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Process optimization</span>
+              <span class="tag">Payments</span>
+              <span class="tag">Requirements</span>
+            </div>
+            <p class="case-note">Professional work, described at a level that keeps internal details confidential.</p>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="case-study" data-reveal id="thai-food">
+          <div>
+            <span class="case-id">02</span>
             <span class="case-status">Senior project · 2023</span>
           </div>
           <div>
             <h2>Deep Learning for Thai Food Image Classification</h2>
             <p class="case-desc">
-              A convolutional neural network that identifies Thai dishes from a single photo —
+              A convolutional neural network that identifies Thai dishes from a single photo,
               built and benchmarked across four architectures for my Statistics senior project
               at Chulalongkorn University.
             </p>
             <div class="case-entry">
               <span class="entry-key">Problem</span>
-              <p class="entry-val">Thai dishes look alike and go by many names, which makes them hard to identify from a photo — especially for visitors ordering food. Could a model do it reliably from the image alone?</p>
+              <p class="entry-val">Thai dishes look alike and go by many names, which makes them hard to identify from a photo, especially for visitors ordering food. Could a model do it reliably from the image alone?</p>
 
               <span class="entry-key">Method</span>
-              <p class="entry-val">Applied transfer learning across four CNN architectures — VGG16, ResNet50, InceptionV3, and Xception — under two schemes: feature extraction and fine-tuning. Trained on 3,600 images spanning 12 Thai dishes (Kaggle), resized to 224×224, with data augmentation, dropout, and early stopping. Python and TensorFlow/Keras on Google Colab.</p>
+              <p class="entry-val">Applied transfer learning across four CNN architectures (VGG16, ResNet50, InceptionV3, and Xception) under two schemes: feature extraction and fine-tuning. Trained on 3,600 images spanning 12 Thai dishes (Kaggle), resized to 224×224, with data augmentation, dropout, and early stopping. Python and TensorFlow/Keras on Google Colab.</p>
 
               <span class="entry-key">Result</span>
-              <p class="entry-val">The fine-tuned Xception model reached 93.06% accuracy (93.02% F1) — the strongest of the four — classifying dishes such as Pad Kra Pao at near-100% F1.</p>
+              <p class="entry-val">The fine-tuned Xception model reached 93.06% accuracy (93.02% F1), the strongest of the four, classifying dishes such as Pad Kra Pao at near-100% F1.</p>
+
+              <span class="entry-key">Limitation</span>
+              <p class="entry-val">Scope was 12 dishes from a curated dataset, so the model isn't validated on dishes outside those classes, mixed plates, or the lighting and angles of real ordering photos. The remaining errors sit between visually similar dishes.</p>
+
+              <span class="entry-key">What I'd change</span>
+              <p class="entry-val">Widen the class set, fold in real user photos, and look at calibration and the confusion between lookalike dishes rather than headline accuracy, then export a quantized model for on-device inference.</p>
             </div>
             <div class="case-tags">
               <span class="tag">Python</span>
@@ -95,27 +142,33 @@
           </div>
         </article>
 
-        <!-- 02 -->
+        <!-- 03 -->
         <article class="case-study" data-reveal id="vehicle-routing">
           <div>
-            <span class="case-id">02</span>
+            <span class="case-id">03</span>
             <span class="case-status">Competition · 2022 · Team of 5</span>
           </div>
           <div>
-            <h2>Dynamic Vehicle Routing — EURO Meets NeurIPS 2022</h2>
+            <h2>Dynamic Vehicle Routing · EURO Meets NeurIPS 2022</h2>
             <p class="case-desc">
               Dispatch strategies for the vehicle routing problem with time windows, built for
               the EURO Meets NeurIPS 2022 competition as part of the five-person Team4sake.
             </p>
             <div class="case-entry">
               <span class="entry-key">Problem</span>
-              <p class="entry-val">In the dynamic setting, customer requests arrive throughout the day. At each epoch you must decide which requests to dispatch now and which to postpone — a bet that shapes total routing cost.</p>
+              <p class="entry-val">In the dynamic setting, customer requests arrive throughout the day. At each epoch you must decide which requests to dispatch now and which to postpone: a bet that shapes total routing cost.</p>
 
               <span class="entry-key">Method</span>
-              <p class="entry-val">Starting from the Hybrid Genetic Search static solver, we designed and compared five dispatch strategies: a distance Cutoff, a Modified Cutoff that grows per epoch, a Centroid Modified Cutoff, a logistic-regression Ensemble that selects the best strategy per instance, and a single-customer postponement rule. Features were engineered from instance geometry — customer density within distance percentiles.</p>
+              <p class="entry-val">Starting from the Hybrid Genetic Search static solver, we designed and compared five dispatch strategies: a distance Cutoff, a Modified Cutoff that grows per epoch, a Centroid Modified Cutoff, a logistic-regression Ensemble that selects the best strategy per instance, and a single-customer postponement rule. Features were engineered from instance geometry: customer density within distance percentiles.</p>
 
               <span class="entry-key">Result</span>
-              <p class="entry-val">The cutoff-family strategies beat the greedy, lazy, and random baselines. Team4sake placed 26th on the qualification leaderboard (static cost ≈180,843; dynamic ≈360,945).</p>
+              <p class="entry-val">The cutoff-family strategies beat the greedy, lazy, and random baselines. Team4sake placed 26th of 54 teams in the dynamic setting (static cost ≈180,843; dynamic ≈360,945).</p>
+
+              <span class="entry-key">Limitation</span>
+              <p class="entry-val">Cutoff thresholds were tuned on the competition's instance distribution, so they wouldn't necessarily transfer to different demand patterns or epoch lengths. Placing 26th of 54 also means a good number of teams' policies beat ours.</p>
+
+              <span class="entry-key">What I'd change</span>
+              <p class="entry-val">Learn the dispatch policy directly, for example with reinforcement learning over epochs, instead of hand-set cutoffs, and validate it on out-of-distribution instances rather than only the competition set.</p>
             </div>
             <div class="case-tags">
               <span class="tag">Python</span>

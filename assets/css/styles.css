@@ -347,6 +347,34 @@ p { margin-top: 0; line-height: 1.65; }
   .site-nav a:hover::after { transform: scaleX(1); }
 }
 
+/* Résumé download: a persistent, recruiter-facing action in the nav.
+   Styled as an accent-outlined action (not a page link) so it reads as
+   the one thing to click, on every page. */
+.site-nav .nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background var(--dur-fast) ease, color var(--dur-fast) ease,
+              transform var(--dur-fast) var(--ease-out);
+}
+.site-nav .nav-resume::after { display: none; }
+.site-nav .nav-resume:active { transform: translateY(1px); }
+.site-nav .nav-resume:focus-visible {
+  color: #fff;
+  background: var(--accent);
+}
+@media (hover: hover) and (pointer: fine) {
+  .site-nav .nav-resume:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+
 /* ---------------------------------------------------------------
    Shared labels
 --------------------------------------------------------------- */
@@ -1294,6 +1322,13 @@ p { margin-top: 0; line-height: 1.65; }
   margin-top: 20px;
 }
 
+.case-note {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* ---------------------------------------------------------------
    Note entries (notes.html)
 --------------------------------------------------------------- */
@@ -1448,13 +1483,6 @@ p { margin-top: 0; line-height: 1.65; }
 }
 
 .resume-cta:active { transform: translateY(1px); }
-
-.resume-cta--disabled {
-  background: transparent;
-  color: var(--muted);
-  border-color: var(--line-strong);
-  cursor: default;
-}
 
 @media (hover: hover) and (pointer: fine) {
   .resume-cta:hover { background: #2a2f35; }
